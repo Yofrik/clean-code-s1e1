@@ -7,47 +7,48 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.page-header{
+.page__header{
   display: flex;
 }
-.header-nav-ul {
+.header__nav-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
-.header-nav-ul > li > a {
+.nav-list__link {
   text-decoration: none;
 }
-.header-nav{
+.header__nav{
   width: 72%;
 }
-.matrix-info {
+.main__matrix-info {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.matrix-info img {
+.matrix-info__image {
   width: 100%;
 }
-.matrix-info .more-info {
+.main__matrix-info .matrix-info__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .matrix-info { 
+  .main__matrix-info { 
     text-align: center;
   }
 
 }
-.task {
+.todo__item_task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  overflow-x: hidden;
 }
-.task-row-wrapper {
+.task-row-wrapper__new-task {
   display: flex;
 }
 ul {
@@ -108,7 +109,7 @@ label[for="new-task"] {
   margin: 0 0 20px;
 }
 input#new-task {
-  width: 318px;
+  width: 400px;
 }
 
 /* Task list */
@@ -137,12 +138,17 @@ li > label {
 li >  input[type="text"] {
   width: 226px;
 }
-.delete img {
+.todo__item_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete img:hover {
+.completed__item_delete img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+.todo__remove-image:hover, .completed__remove-image:hover {
   transform: rotateZ(0);
 }
 
